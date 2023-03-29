@@ -47,7 +47,7 @@ Links to all relevant documentation files, including:
 
 Choose a license that meets the organization's legal requirements and supports the sharing and modification of the code.
 Please follow the guidelines of the Open Source group while chosing the License.
-This repository includes a LICENSE.md file that you can customize with the license of your choice.
+This repository includes a [LICENSE.md](LICENSE.md) file that you can customize with the license of your choice.
 
 <a id="Contributing"></a>
 ## Contributing
