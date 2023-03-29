@@ -14,7 +14,7 @@ If you are planning to contribute, you need to familiarize yourself with these s
 * Language 1
 * Language 2
 
-<h2>Tool-specific Settings</h2>
+## Tool-specific Settings
 * Tool 1 settings
 * Tool 2 settings
 
