@@ -29,7 +29,7 @@ This project and everyone participating in it is governed by the [Code of Conduc
 By participating, you are expected to uphold this code.
 
 <a id="i-just-have-a-question"></a>
-## I just have a question!!!
+## I just have a question!
 
 Please ask the questions in the discussions page.
 
