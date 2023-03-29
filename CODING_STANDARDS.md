@@ -10,7 +10,7 @@ Following the standards means anyone will be able to understand a section of cod
 
 If you are planning to contribute, you need to familiarize yourself with these standards, as any code you submit will need to comply with them.
 
-<h2>Language-specific Standards</h2>
+## Language-specific Standards
 * Language 1
 * Language 2
 
