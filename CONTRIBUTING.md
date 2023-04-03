@@ -8,7 +8,7 @@ These are mostly guidelines, not rules. Use your best judgment, and feel free to
 
 [Code of Conduct](#code-of-conduct)
 
-[I just have a question!!](#i-just-have-a-question)
+[I just have a question!](#i-just-have-a-question)
 
 [What should I know before I get started?](#what-should-i-know-before-i-get-started)
 * [Tools and Packages](#tools-and-packages)
