@@ -38,7 +38,7 @@ Describe the most common workflows for users and contributors. Include links to 
 
 > **Remove this section and "Included Files" below after the repository is public and stable.** See [Post-release cleanup](docs/MAINTAINER_QUICKSTART.md#8-post-release-cleanup) for the full list of bootstrapping artifacts to delete.
 
-1. Choose the approved license text from [license_suggestions](license_suggestions) and copy it to LICENSE.md.
+1. Choose the approved license text from [license_suggestions](license_suggestions) and copy it to a `LICENSE` file (e.g. `LICENSE`, `LICENSE.md`, `LICENSE.txt`).
 2. Replace all template tokens in the repository.
 3. Review [CONTRIBUTING.md](CONTRIBUTING.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), [CODING_STANDARDS.md](CODING_STANDARDS.md), and [RELEASE.md](RELEASE.md).
 4. Review the GitHub scaffolding in [.github](.github), especially CODEOWNERS, issue forms, the PR template, Dependabot, and workflows.

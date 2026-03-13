@@ -22,7 +22,6 @@ jobs:
 
           required_files=(
             README.md
-            LICENSE.md
             CONTRIBUTING.md
             CODE_OF_CONDUCT.md
             .github/open-source-bootstrap-checklist.md
@@ -36,6 +35,12 @@ jobs:
               missing=1
             fi
           done
+
+          # LICENSE can have various extensions (.md, .txt, .rst) or none
+          if ! ls LICENSE LICENSE.* 2>/dev/null | head -1 > /dev/null; then
+            echo "Missing required file: LICENSE (or LICENSE.md, LICENSE.txt, LICENSE.rst)"
+            missing=1
+          fi
 
           if [[ "$missing" -ne 0 ]]; then
             exit 1
@@ -67,8 +72,8 @@ jobs:
         run: |
           set -euo pipefail
 
-          if [[ -d license_suggestions && -f LICENSE.md ]]; then
-            echo 'LICENSE.md exists but license_suggestions/ has not been removed.'
+          if [[ -d license_suggestions ]] && ls LICENSE LICENSE.* 2>/dev/null | head -1 > /dev/null; then
+            echo 'A LICENSE file exists but license_suggestions/ has not been removed.'
             echo 'Delete the license_suggestions/ directory after choosing your license.'
             exit 1
           fi
