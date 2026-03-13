@@ -5,7 +5,7 @@ Use this checklist in the first 10 minutes after creating a new repository from 
 ## 1. Choose the license
 
 1. Review the approved license texts in [license_suggestions](../license_suggestions).
-2. Copy the chosen text to `LICENSE.md`.
+2. Copy the chosen text to a `LICENSE` file (e.g. `LICENSE`, `LICENSE.md`, `LICENSE.txt`).
 3. If using Apache 2.0, update [NOTICE](../NOTICE) with the project name and year. If not using Apache 2.0, delete the `NOTICE` file.
 4. Delete the `license_suggestions/` directory after making your choice.
 
