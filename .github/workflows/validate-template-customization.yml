@@ -37,8 +37,15 @@ jobs:
           done
 
           # LICENSE can have various extensions (.md, .txt, .rst) or none
-          if ! ls LICENSE LICENSE.* 2>/dev/null | head -1 > /dev/null; then
-            echo "Missing required file: LICENSE (or LICENSE.md, LICENSE.txt, LICENSE.rst)"
+          found_license=false
+          for f in LICENSE LICENSE.*; do
+            if [[ -f "$f" ]]; then
+              found_license=true
+              break
+            fi
+          done
+          if [[ "$found_license" == false ]]; then
+            echo "Missing required file: LICENSE (or LICENSE.<any extension>)"
             missing=1
           fi
 
@@ -72,7 +79,14 @@ jobs:
         run: |
           set -euo pipefail
 
-          if [[ -d license_suggestions ]] && ls LICENSE LICENSE.* 2>/dev/null | head -1 > /dev/null; then
+          found_license=false
+          for f in LICENSE LICENSE.*; do
+            if [[ -f "$f" ]]; then
+              found_license=true
+              break
+            fi
+          done
+          if [[ -d license_suggestions && "$found_license" == true ]]; then
             echo 'A LICENSE file exists but license_suggestions/ has not been removed.'
             echo 'Delete the license_suggestions/ directory after choosing your license.'
             exit 1
