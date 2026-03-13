@@ -1,6 +1,8 @@
 name: Create initial open source checklist
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
