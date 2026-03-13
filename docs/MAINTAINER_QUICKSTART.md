@@ -15,7 +15,7 @@ Replace every placeholder in the form `{{TOKEN_NAME}}`. Run `grep -rn '{{' .` to
 
 | Token | Where used | Description |
 |---|---|---|
-| `{{PROJECT_NAME}}` | README, CONTRIBUTING, NOTICE | Project name |
+| `{{PROJECT_NAME}}` | README, CONTRIBUTING | Project name |
 | `{{ONE_LINE_DESCRIPTION}}` | README | Short project description |
 | `{{PROJECT_STATUS}}` | README | e.g., "Active", "Experimental" |
 | `{{MAINTAINER_TEAM_OR_NAME}}` | README | Primary maintainers |
