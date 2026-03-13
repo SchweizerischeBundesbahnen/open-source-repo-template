@@ -35,7 +35,7 @@ jobs:
               per_page: 100,
             });
 
-            const existingIssue = issues.find((issue) => issue.title === title);
+            const existingIssue = issues.find((issue) => issue.title === title && !issue.pull_request);
 
             if (existingIssue) {
               core.notice(`Checklist issue already exists: #${existingIssue.number}`);

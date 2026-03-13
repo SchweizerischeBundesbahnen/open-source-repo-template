@@ -11,18 +11,20 @@ Use this checklist in the first 10 minutes after creating a new repository from 
 
 ## 2. Replace template tokens
 
-Replace every placeholder in the form `{{TOKEN_NAME}}`.
+Replace every placeholder in the form `{{TOKEN_NAME}}`. Run `grep -rn '{{' .` to find all occurrences.
 
-At minimum, update:
-
-- project name
-- one-line description
-- project status
-- maintainer team or owner
-- support channel
-- license name
-- code of conduct enforcement contact
-- CODEOWNERS team slug
+| Token | Where used | Description |
+|---|---|---|
+| `{{PROJECT_NAME}}` | README, CONTRIBUTING, NOTICE | Project name |
+| `{{ONE_LINE_DESCRIPTION}}` | README | Short project description |
+| `{{PROJECT_STATUS}}` | README | e.g., "Active", "Experimental" |
+| `{{MAINTAINER_TEAM_OR_NAME}}` | README | Primary maintainers |
+| `{{SUPPORT_CHANNEL}}` | README, issue template config | Support channel — use a URL or `mailto:` URI for the issue template |
+| `{{LICENSE_NAME}}` | README | SPDX license identifier or short name |
+| `{{MAINTAINER_PRIVATE_CONTACT}}` | CODE_OF_CONDUCT | Enforcement contact (email or private channel) |
+| `{{REPO_NAME}}` | README (badge, commented out) | GitHub repository name (without org prefix) |
+| `{{YEAR}}` | NOTICE | Copyright year (only needed for Apache 2.0) |
+| `{{OWNING_TEAM_SLUG}}` | .github/CODEOWNERS | GitHub team slug for code ownership |
 
 ## 3. Review the baseline documents
 
@@ -42,6 +44,7 @@ Keep them short, accurate, and project-specific. Delete any optional file that d
 The template includes several GitHub configuration files. Keep what fits your project and delete the rest — unused scaffolding adds confusion for contributors.
 
 - [CODEOWNERS](../.github/CODEOWNERS) — recommended
+  > **Note:** If `{{OWNING_TEAM_SLUG}}` is not replaced or the team slug is invalid, CODEOWNERS will silently fail to assign reviewers. GitHub does not report this error.
 - [bug report form](../.github/ISSUE_TEMPLATE/bug_report.yml) — optional
 - [feature request form](../.github/ISSUE_TEMPLATE/feature_request.yml) — optional
 - [pull request template](../.github/pull_request_template.md) — optional
@@ -72,3 +75,15 @@ Use the generated checklist issue to track these actions.
 The workflow [validate-template-customization.yml](../.github/workflows/validate-template-customization.yml) is intended to fail until placeholders are removed and required files exist.
 
 Make the repository green before announcing or publishing it.
+
+## 8. Post-release cleanup
+
+After the repository is public and stable, remove the bootstrapping artifacts that are no longer needed:
+
+- `.github/workflows/validate-template-customization.yml` — template validation workflow
+- `.github/workflows/create-initial-open-source-checklist.yml` — checklist issue creation workflow
+- `.github/open-source-bootstrap-checklist.md` — checklist source file
+- `docs/MAINTAINER_QUICKSTART.md` — this file
+- The "Repository Bootstrap" and "Included Files" sections from `README.md`
+
+These files exist only to guide initial setup. Keeping them after publication adds confusion for contributors.

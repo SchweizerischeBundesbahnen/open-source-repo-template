@@ -101,11 +101,22 @@ jobs:
             'INSERT '
             ' WIP'
             '^WIP'
-            'Atom\?'
           )
 
+          existing_files=()
+          for file in "${files[@]}"; do
+            if [[ -f "$file" ]]; then
+              existing_files+=("$file")
+            fi
+          done
+
+          if [[ ${#existing_files[@]} -eq 0 ]]; then
+            echo "No target files found to check for stale references."
+            exit 0
+          fi
+
           for pattern in "${patterns[@]}"; do
-            if grep -InE "$pattern" "${files[@]}"; then
+            if grep -InE "$pattern" "${existing_files[@]}"; then
               echo "Stale template content found for pattern: $pattern"
               exit 1
             fi

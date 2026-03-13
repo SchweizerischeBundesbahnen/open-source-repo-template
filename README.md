@@ -36,6 +36,8 @@ Describe the most common workflows for users and contributors. Include links to 
 
 ## Repository Bootstrap
 
+> **Remove this section and "Included Files" below after the repository is public and stable.** See [Post-release cleanup](docs/MAINTAINER_QUICKSTART.md#8-post-release-cleanup) for the full list of bootstrapping artifacts to delete.
+
 1. Choose the approved license text from [license_suggestions](license_suggestions) and copy it to LICENSE.md.
 2. Replace all template tokens in the repository.
 3. Review [CONTRIBUTING.md](CONTRIBUTING.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), [CODING_STANDARDS.md](CODING_STANDARDS.md), and [RELEASE.md](RELEASE.md).
