@@ -85,5 +85,6 @@ After the repository is public and stable, remove the bootstrapping artifacts th
 - `.github/open-source-bootstrap-checklist.md` — checklist source file
 - `docs/MAINTAINER_QUICKSTART.md` — this file
 - The "Repository Bootstrap" and "Included Files" sections from `README.md`
+- Check if NOTICE file is required: If this repository does not use the Apache 2.0 license, this file can be removed.
 
 These files exist only to guide initial setup. Keeping them after publication adds confusion for contributors.
