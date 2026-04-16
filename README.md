@@ -1,4 +1,5 @@
 # {{PROJECT_NAME}}
+test commit
 
 > Replace every `{{TOKEN_NAME}}` placeholder before making a repository public. Run the validation workflow manually from the Actions tab to verify customization is complete.
 
