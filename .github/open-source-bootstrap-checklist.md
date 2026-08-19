@@ -32,7 +32,7 @@ Keep, customize, or remove based on your project's needs.
 - [ ] If using Apache 2.0, update the NOTICE file with project name and year; otherwise remove it
 - [ ] Review /.github/ISSUE_TEMPLATE/ and keep or adjust the issue forms; remove if not needed
 - [ ] Review /.github/pull_request_template.md; remove if not needed
-- [ ] Review the stale workflow and labeler workflow; adjust timeouts and labels or remove if not needed
+- [ ] Review the labeler workflow; adjust the labels or remove if not needed
 
 ***--- Tasks after the repository is set to PUBLIC ---***
 
