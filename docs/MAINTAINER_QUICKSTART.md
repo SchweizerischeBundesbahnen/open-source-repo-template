@@ -50,7 +50,6 @@ The template includes several GitHub configuration files. Keep what fits your pr
 - [pull request template](../.github/pull_request_template.md) — optional
 - [Dependabot config](../.github/dependabot.yml) — recommended
 - [labeler config](../.github/labeler.yml) — optional
-- [stale workflow](../.github/workflows/stale.yml) — optional
 
 ## 5. Open the repository readiness checklist
 
